@@ -65,6 +65,7 @@ button:hover {
   justify-self: center;
   overflow: hidden;
   width: 110%;
+  text-align: center;
 }
 
 .hero-image.left,
@@ -80,6 +81,7 @@ button:hover {
   grid-column: span 2;
   justify-self: center;
   padding: 0 2rem 0 2rem;
+  max-width: 460px;
 }
 
 h1 {
@@ -181,6 +183,11 @@ main {
   color: var(--cyan-600);
 }
 
+.main-text {
+  max-width: 504px;
+  text-align: center;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: var(--fw-bold);
@@ -258,4 +265,33 @@ footer button {
 
 footer .ver {
   color: var(--purple-300);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+
+  .main-images {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .overline {
+    font-size: 1rem;
+  }
+
+  .main-text h2 {
+    font-size: 2.5rem;
+    max-width: 445px;
+    margin: 0 auto 0 auto;
+  }
+
+  footer p {
+    max-width: 504px;
+  }
 }
